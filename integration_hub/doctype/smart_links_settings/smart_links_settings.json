@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "creation": "2024-12-03 17:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "sb_google_drive",
+  "client_id",
+  "client_secret",
+  "api_key",
+  "sb_enabled_doctypes",
+  "enabled_doctypes"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "sb_google_drive",
+   "fieldtype": "Section Break",
+   "label": "Google Drive Configuration"
+  },
+  {
+   "fieldname": "client_id",
+   "fieldtype": "Data",
+   "label": "Client ID",
+   "description": "OAuth 2.0 Client ID from Google Cloud Console"
+  },
+  {
+   "fieldname": "client_secret",
+   "fieldtype": "Password",
+   "label": "Client Secret",
+   "description": "OAuth 2.0 Client Secret from Google Cloud Console"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key",
+   "description": "Google Cloud API Key for the Picker API"
+  },
+  {
+   "fieldname": "sb_enabled_doctypes",
+   "fieldtype": "Section Break",
+   "label": "Enabled Document Types"
+  },
+  {
+   "fieldname": "enabled_doctypes",
+   "fieldtype": "Table",
+   "label": "Enabled DocTypes",
+   "options": "Smart Links Enabled DocType",
+   "description": "Document types that can have Smart Links attached"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-12-05 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Smart Links",
+ "name": "Smart Links Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

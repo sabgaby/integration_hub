@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "creation": "2024-12-03 17:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "link_type",
+  "file_id",
+  "file_name",
+  "column_break_1",
+  "mime_type",
+  "file_type",
+  "section_break_2",
+  "file_size",
+  "web_view_link",
+  "column_break_3",
+  "icon_link",
+  "thumbnail_link",
+  "drive_id",
+  "section_break_4",
+  "added_by",
+  "added_on"
+ ],
+ "fields": [
+  {
+   "default": "Google Drive",
+   "fieldname": "link_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Link Type",
+   "options": "Google Drive\nWeb Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "File ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "File Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mime_type",
+   "fieldtype": "Data",
+   "label": "MIME Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "file_type",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "File Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "file_size",
+   "fieldtype": "Int",
+   "label": "File Size",
+   "read_only": 1
+  },
+  {
+   "fieldname": "web_view_link",
+   "fieldtype": "Small Text",
+   "label": "Web View Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "icon_link",
+   "fieldtype": "Small Text",
+   "label": "Icon Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "thumbnail_link",
+   "fieldtype": "Small Text",
+   "label": "Thumbnail Link",
+   "read_only": 1
+  },
+  {
+   "fieldname": "drive_id",
+   "fieldtype": "Data",
+   "label": "Drive ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "added_by",
+   "fieldtype": "Link",
+   "label": "Added By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "added_on",
+   "fieldtype": "Datetime",
+   "label": "Added On",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-05 13:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Smart Links",
+ "name": "Smart Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,127 @@
+{
+	"actions": [],
+	"creation": "2024-12-10 10:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"enabled",
+		"oauth_section",
+		"client_id",
+		"client_secret",
+		"column_break_oauth",
+		"api_key",
+		"services_section",
+		"enable_drive",
+		"enable_calendar",
+		"column_break_services",
+		"enable_gmail",
+		"shared_drives_section",
+		"shared_drives"
+	],
+	"fields": [
+		{
+			"default": "0",
+			"fieldname": "enabled",
+			"fieldtype": "Check",
+			"label": "Enabled"
+		},
+		{
+			"depends_on": "enabled",
+			"fieldname": "oauth_section",
+			"fieldtype": "Section Break",
+			"label": "OAuth Credentials"
+		},
+		{
+			"description": "OAuth 2.0 Client ID from Google Cloud Console",
+			"fieldname": "client_id",
+			"fieldtype": "Data",
+			"label": "Client ID",
+			"mandatory_depends_on": "enabled"
+		},
+		{
+			"description": "OAuth 2.0 Client Secret from Google Cloud Console",
+			"fieldname": "client_secret",
+			"fieldtype": "Password",
+			"label": "Client Secret",
+			"mandatory_depends_on": "enabled"
+		},
+		{
+			"fieldname": "column_break_oauth",
+			"fieldtype": "Column Break"
+		},
+		{
+			"description": "API Key for Google Picker (optional, for Drive file picker)",
+			"fieldname": "api_key",
+			"fieldtype": "Data",
+			"label": "API Key"
+		},
+		{
+			"depends_on": "enabled",
+			"fieldname": "services_section",
+			"fieldtype": "Section Break",
+			"label": "Enabled Services"
+		},
+		{
+			"default": "1",
+			"description": "Enable Google Drive integration (file access, Shared Drives)",
+			"fieldname": "enable_drive",
+			"fieldtype": "Check",
+			"label": "Google Drive"
+		},
+		{
+			"default": "1",
+			"description": "Enable Google Calendar integration (events, invitations)",
+			"fieldname": "enable_calendar",
+			"fieldtype": "Check",
+			"label": "Google Calendar"
+		},
+		{
+			"fieldname": "column_break_services",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"description": "Enable Gmail integration (email sending/reading)",
+			"fieldname": "enable_gmail",
+			"fieldtype": "Check",
+			"label": "Gmail"
+		},
+		{
+			"depends_on": "enable_drive",
+			"fieldname": "shared_drives_section",
+			"fieldtype": "Section Break",
+			"label": "Shared Drives"
+		},
+		{
+			"description": "Shared Drives available for file selection",
+			"fieldname": "shared_drives",
+			"fieldtype": "Table",
+			"label": "Shared Drives",
+			"options": "Google Workspace Shared Drive"
+		}
+	],
+	"index_web_pages_for_search": 1,
+	"issingle": 1,
+	"links": [],
+	"modified": "2024-12-10 10:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "Google Workspace",
+	"name": "Google Workspace Settings",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"print": 1,
+			"read": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

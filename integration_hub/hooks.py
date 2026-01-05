@@ -1,7 +1,7 @@
-app_name = "google_workspace"
-app_title = "Google Workspace"
+app_name = "integration_hub"
+app_title = "Integration Hub"
 app_publisher = "Swiss Cluster AG"
-app_description = "Google Workspace integration for Frappe apps"
+app_description = "Integration hub for storing authentication keys and connecting to various APIs"
 app_email = "hello@fosfera.com"
 app_license = "mit"
 
@@ -25,8 +25,11 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/google_workspace/css/google_workspace.css"
-# app_include_js = "/assets/google_workspace/js/google_workspace.js"
+# app_include_css = "/assets/integration_hub/css/integration_hub.css"
+# app_include_js = "/assets/integration_hub/js/integration_hub.js"
+# Smart Links assets
+app_include_css = "/assets/integration_hub/css/smart_links.css"
+app_include_js = "smart_links.bundle.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/google_workspace/css/google_workspace.css"
@@ -85,14 +88,12 @@ app_license = "mit"
 # Installation
 # ------------
 
-# before_install = "google_workspace.install.before_install"
-# after_install = "google_workspace.install.after_install"
+after_install = "integration_hub.setup.install.after_install"
 
 # Uninstallation
 # ------------
 
-# before_uninstall = "google_workspace.uninstall.before_uninstall"
-# after_uninstall = "google_workspace.uninstall.after_uninstall"
+before_uninstall = "integration_hub.setup.install.before_uninstall"
 
 # Integration Setup
 # ------------------
